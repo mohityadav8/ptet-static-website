@@ -1,16 +1,19 @@
 document.addEventListener("DOMContentLoaded", () => {
+
     const hamburger = document.getElementById("hamburger");
     const navbar = document.getElementById("navbar");
 
-    hamburger?.addEventListener("click", () => {
-        const isMenuOpen = navbar.style.display === "flex";
-        navbar.style.display = isMenuOpen ? "none" : "flex";
+    if (!hamburger || !navbar) return;
+
+    hamburger.addEventListener("click", (e) => {
+        e.stopPropagation();
+        navbar.classList.toggle("active");
     });
 
-    // Close the menu if clicked anywhere outside
     document.addEventListener("click", (event) => {
-        if (!hamburger.contains(event.target) && !navbar.contains(event.target)) {
-            navbar.style.display = "none";
+        if (!navbar.contains(event.target) && !hamburger.contains(event.target)) {
+            navbar.classList.remove("active");
         }
     });
+
 });
