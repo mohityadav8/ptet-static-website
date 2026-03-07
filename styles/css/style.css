@@ -109,7 +109,7 @@ img {
 
 /* Hero Section */
 #point{
-    background-image:url('../images/hero.jpg');
+    background-image:url('../../assets/images/hero.jpg');
     background-size:cover;
     background-position:center;
     min-height:90vh;
