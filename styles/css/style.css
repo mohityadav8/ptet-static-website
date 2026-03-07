@@ -109,46 +109,89 @@ img {
 
 /* Hero Section */
 #point{
-    background-image:linear-gradient(rgba(0,0,0,0.45),rgba(0,0,0,0.45)), url('../images/hero.jpg');
-    height:90vh;
-    width:100%;
-    background-position:center;
+    background-image:url('../images/hero.jpg');
     background-size:cover;
+    background-position:center;
+    min-height:90vh;
     display:flex;
     align-items:center;
     justify-content:center;
-    flex-direction:column;
-    padding:20px;
-    text-align:center;
+    padding:60px 40px;
 }
 
-#box1{
-    background:rgba(0,0,0,0.55);
-    color:#ffffff;
-    padding:40px 50px;
+.hero-wrapper{
+    display:flex;
+    align-items:center;
+    justify-content:flex-end;
+    max-width:1200px;
+    width:100%;
+}
+
+.hero-image{
+    flex:1;
+}
+
+.hero-text{
+    max-width:460px;
+    background:rgba(255,255,255,0.85);
+    backdrop-filter:blur(14px);
+    padding:25px 38px 35px 38px;
     border-radius:16px;
-    backdrop-filter:blur(12px);
-    box-shadow:0 20px 50px rgba(0,0,0,0.4);
-    max-width:700px;
+    box-shadow:0 20px 60px rgba(0,0,0,0.22);
+    border:1px solid rgba(255,255,255,0.35);
 }
 
-#box1 h2{
-    font-size:42px;
+.hero-text h2{
+    font-size:38px;
     font-weight:700;
-    margin-bottom:15px;
+    line-height:1.25;
+    margin-top:0;
+    margin-bottom:12px;
+    color:#1a1a1a;
 }
 
-#box1 h3{
-    font-size:22px;
+.hero-text h3{
+    font-size:24px;
     font-weight:500;
-    margin-bottom:15px;
+    margin-bottom:22px;
+    color:#444;
 }
 
-#box1 h5{
+.hero-text p{
+    margin:8px 0;
     font-size:15px;
-    font-weight:400;
-    margin:6px 0;
-    color:#e2e2e2;
+    line-height:1.6;
+    color:#555;
+}
+
+.hero-text button{
+    margin-top:22px;
+}
+
+.hero-points{
+    list-style:none;
+    padding:0;
+    margin:18px 0 22px 0;
+}
+
+.hero-points li{
+    display:flex;
+    align-items:flex-start;
+    gap:10px;
+    font-size:15px;
+    color:#555;
+    margin-bottom:8px;
+    line-height:1.5;
+}
+
+.hero-points i{
+    color:#8d2123;
+    margin-top:3px;
+    font-size:14px;
+}
+
+.hero-actions{
+    margin-top:10px;
 }
 
 #features{
