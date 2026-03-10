@@ -185,3 +185,201 @@ backdrop-filter:blur(6px);
     }
 
 }
+/* DROPDOWN */
+
+.dropdown{
+    position:relative;
+}
+
+/* Dropdown menu container */
+
+.dropdown-menu{
+    position:absolute;
+    top:50px;
+    left:0;
+    background:rgba(255,255,255,0.95);
+    backdrop-filter:blur(8px);
+    border-radius:14px;
+    list-style:none;
+    padding:10px 0;
+    min-width:200px;
+    box-shadow:0 15px 30px rgba(0,0,0,0.12);
+
+    opacity:0;
+    visibility:hidden;
+    transform:translateY(10px);
+    transition:all 0.25s ease;
+}
+
+/* Dropdown items */
+
+.dropdown-menu li{
+    padding:0;
+}
+
+.dropdown-menu li a{
+    display:block;
+    padding:10px 20px;
+    text-decoration:none;
+    color:#444;
+    font-size:15px;
+    font-weight:500;
+    transition:all 0.2s ease;
+}
+
+/* Hover effect */
+
+.dropdown-menu li a:hover{
+    background:#f5f7fb;
+    color:#8d2123;
+}
+
+/* Show dropdown */
+
+.dropdown:hover .dropdown-menu{
+    opacity:1;
+    visibility:visible;
+    transform:translateY(0);
+}
+
+/* Arrow icon alignment */
+
+.dropdown > a i{
+    font-size:12px;
+    margin-left:5px;
+    transition:0.25s;
+}
+
+/* Rotate arrow */
+
+.dropdown:hover > a i{
+    transform:rotate(180deg);
+}
+
+/* MOBILE FIX */
+
+@media (max-width:768px){
+
+.dropdown-menu{
+    position:static;
+    opacity:1;
+    visibility:visible;
+    transform:none;
+    background:transparent;
+    box-shadow:none;
+    padding-left:10px;
+}
+
+.dropdown-menu li a{
+    padding:6px 0;
+}
+
+}
+
+/* =========================
+   USER PROFILE SECTION
+========================= */
+
+.user-profile{
+    position:relative;
+    display:flex;
+    align-items:center;
+    gap:10px;
+    cursor:pointer;
+}
+
+/* Profile image */
+
+.user-photo{
+    width:34px;
+    height:34px;
+    border-radius:50%;
+    object-fit:cover;
+    border:2px solid rgba(0,0,0,0.08);
+}
+
+/* Username */
+
+.user-name{
+    font-size:14px;
+    font-weight:600;
+    color:#333;
+}
+
+/* Arrow */
+
+.profile-arrow{
+    font-size:12px;
+    color:#555;
+}
+
+/* =========================
+   PROFILE DROPDOWN
+========================= */
+
+.profile-dropdown{
+
+    position:absolute;
+
+    top:45px;
+    right:0;
+
+    background:white;
+
+    border-radius:12px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,0.12);
+
+    min-width:170px;
+
+    display:none;
+
+    flex-direction:column;
+
+    overflow:hidden;
+
+    z-index:2000;
+}
+
+/* dropdown links */
+
+.profile-dropdown a,
+.profile-dropdown button{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    padding:12px 16px;
+
+    text-decoration:none;
+
+    border:none;
+
+    background:none;
+
+    font-size:14px;
+
+    color:#333;
+
+    cursor:pointer;
+
+    width:100%;
+}
+
+/* hover */
+
+.profile-dropdown a:hover,
+.profile-dropdown button:hover{
+
+    background:#f5f7fb;
+
+}
+
+/* show dropdown */
+
+.user-profile.active .profile-dropdown{
+    display:flex;
+}

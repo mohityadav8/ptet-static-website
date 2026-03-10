@@ -1,0 +1,287 @@
+/* LOGIN PAGE */
+
+.login-page{
+    width:100%;
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding-top:20px;
+
+    background:linear-gradient(135deg,#eef2f7,#f7f9fc);
+}
+
+
+/* LOGIN CARD */
+
+.login-container{
+    width:100%;
+    max-width:430px;
+
+    background:rgba(255,255,255,0.9);
+    backdrop-filter:blur(10px);
+
+    padding:45px 38px;
+
+    border-radius:20px;
+
+    box-shadow:
+        0 20px 40px rgba(0,0,0,0.08),
+        0 5px 15px rgba(0,0,0,0.04);
+
+    text-align:center;
+
+    transition:0.3s ease;
+    box-sizing:border-box;
+}
+
+.login-container:hover{
+    transform:translateY(-4px);
+}
+
+
+/* TITLE */
+
+.login-container h2{
+    font-size:30px;
+    margin-bottom:6px;
+    color:#222;
+    font-weight:700;
+}
+
+.login-subtitle{
+    font-size:14px;
+    color:#777;
+    margin-bottom:32px;
+}
+
+
+/* INPUT GROUP */
+
+.input-group{
+    position:relative;
+    margin-bottom:18px;
+    width:100%;
+}
+
+.input-group i{
+    position:absolute;
+    left:14px;
+    top:50%;
+    transform:translateY(-50%);
+    color:#888;
+    font-size:14px;
+}
+
+.input-group input{
+    width:100%;
+    padding:13px 14px 13px 42px;
+
+    border-radius:12px;
+    border:1px solid #ddd;
+
+    font-size:14px;
+
+    outline:none;
+
+    background:#fafafa;
+
+    transition:all 0.25s ease;
+
+    box-sizing:border-box;
+}
+
+.input-group input:focus{
+    border-color:#2f855a;
+    background:white;
+
+    box-shadow:0 0 0 3px rgba(47,133,90,0.15);
+}
+
+
+/* OPTIONS */
+
+.login-options{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    font-size:13px;
+
+    margin-bottom:22px;
+
+    color:#555;
+}
+
+.login-options a{
+    text-decoration:none;
+    color:#2f855a;
+    font-weight:500;
+}
+
+.login-options a:hover{
+    text-decoration:underline;
+}
+
+
+/* BUTTON */
+
+.login-submit{
+    width:100%;
+    padding:13px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:linear-gradient(135deg,#2f855a,#2b7a50);
+
+    color:white;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:all 0.25s ease;
+
+    box-shadow:0 8px 18px rgba(47,133,90,0.35);
+}
+
+.login-submit:hover{
+    transform:translateY(-2px);
+    box-shadow:0 12px 24px rgba(47,133,90,0.45);
+}
+
+
+/* REGISTER LINK */
+
+.register-link{
+    margin-top:22px;
+    font-size:14px;
+    color:#555;
+}
+
+.register-link a{
+    color:#2f855a;
+    text-decoration:none;
+    font-weight:600;
+}
+
+.register-link a:hover{
+    text-decoration:underline;
+}
+
+/* AUTH DIVIDER */
+
+.auth-divider{
+    margin:22px 0;
+    position:relative;
+    text-align:center;
+    font-size:13px;
+    color:#888;
+}
+
+.auth-divider span{
+    background:white;
+    padding:0 10px;
+    position:relative;
+    z-index:2;
+}
+
+.auth-divider::before{
+    content:"";
+    position:absolute;
+    top:50%;
+    left:0;
+    width:100%;
+    height:1px;
+    background:#ddd;
+    z-index:1;
+}
+
+
+/* SOCIAL LOGIN BUTTONS */
+
+.social-login{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+}
+
+
+/* GOOGLE LOGIN */
+
+.google-login{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+
+    width:100%;
+    padding:12px;
+
+    border-radius:12px;
+    border:1px solid #ddd;
+
+    background:white;
+
+    font-size:14px;
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:all 0.25s ease;
+}
+
+.google-login i{
+    color:#db4437;
+}
+
+.google-login:hover{
+    background:#f5f5f5;
+}
+
+
+/* GITHUB LOGIN */
+
+.github-login{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+
+    width:100%;
+    padding:12px;
+
+    border-radius:12px;
+    border:1px solid #ddd;
+
+    background:#24292e;
+    color:white;
+
+    font-size:14px;
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:all 0.25s ease;
+}
+
+.github-login i{
+    color:white;
+}
+
+.github-login:hover{
+    background:#1b1f23;
+}
+
+/* MOBILE */
+
+@media(max-width:480px){
+
+.login-container{
+    margin:20px;
+    padding:35px 25px;
+}
+
+}
