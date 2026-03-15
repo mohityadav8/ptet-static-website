@@ -2,8 +2,8 @@
 
 .navbar-wrapper{
     width:100%;
-    position:absolute;
-    top:20px;
+    position:fixed;
+    top:10px;
     left:0;
     display:flex;
     justify-content:center;
@@ -86,7 +86,22 @@
 .nav-actions{
     display:flex;
     align-items:center;
-    gap:12px;
+    gap:14px;
+}
+
+/* AUTH BUTTON CONTAINER */
+
+#auth-buttons{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+/* remove link default style */
+
+#auth-buttons a{
+    text-decoration:none;
+    display:flex;
 }
 
 /* LOGIN BUTTON */
@@ -94,12 +109,16 @@
 .login-btn{
     padding:9px 20px;
     border:none;
+    outline:none;
     background:white;
     border-radius:10px;
     font-weight:600;
     font-size:14px;
     cursor:pointer;
     color:#333;
+    display:flex;
+    align-items:center;
+    justify-content:center;
     box-shadow:0 3px 10px rgba(0,0,0,0.08);
     transition:all 0.25s ease;
 }
@@ -114,14 +133,23 @@
 .register-btn{
     padding:9px 22px;
     border:none;
+    outline:none;
     border-radius:10px;
     background:#2f855a;
     color:white;
     font-weight:600;
     font-size:14px;
     cursor:pointer;
+    display:flex;
+    align-items:center;
+    justify-content:center;
     transition:all 0.25s ease;
     box-shadow:0 6px 18px rgba(47,133,90,0.35);
+}
+
+.login-btn,
+.register-btn{
+    height:36px;
 }
 
 .register-btn:hover{
