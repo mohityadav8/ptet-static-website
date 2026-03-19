@@ -9,16 +9,20 @@ body {
 
 /* Header */
 #header {
+    position: absolute; /* overlay on hero */
+    top: 0;
+    left: 0;
+    width: 100%;
+
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: #E3E6F3;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+
+    padding: 15px 40px;
+
     z-index: 999;
-    position: sticky;
-    top: 0;
-    left: 0;
-    padding: 10px 20px;
+
+    background: transparent; /* IMPORTANT */
 }
 
 #header img {
@@ -104,11 +108,14 @@ body {
     background-image:url('../../assets/images/hero.jpg');
     background-size:cover;
     background-position:center;
-    min-height:90vh;
+
+    min-height:calc(100vh - 80px); /* adjust based on navbar height */
+
     display:flex;
     align-items:center;
     justify-content:center;
-    padding:160px 40px 60px 40px;
+
+    padding:80px 40px 40px 40px;
 }
 
 .hero-wrapper{
@@ -499,15 +506,30 @@ footer a:hover {
 
 @media (max-width:768px){
 
-.hero-wrapper{
-    flex-direction:column;
-    justify-content:center;
-    text-align:center;
-}
+    #point{
+        padding:80px 20px 30px 20px;
+        min-height:auto;
+    }
 
-.hero-text{
-    max-width:100%;
-}
+    .hero-wrapper{
+        flex-direction:column;
+        justify-content:center;
+        align-items:center;
+        text-align:center;
+    }
+
+    .hero-text{
+        max-width:100%;
+        padding:20px;
+    }
+
+    .hero-text h2{
+        font-size:26px;
+    }
+
+    .hero-text h3{
+        font-size:18px;
+    }
 
 }
 
@@ -616,6 +638,10 @@ footer a:hover {
   transition:all 0.25s ease;
 
   z-index:9999;
+}
+
+#scrollTopBtn.show{
+  display:flex;
 }
 
 #scrollTopBtn:hover{
@@ -737,15 +763,24 @@ html{
     scroll-behavior:smooth;
 }
 
-/* scrollbar styling */
+/* SCROLLBAR (modern thin) */
 
 ::-webkit-scrollbar{
-    height:8px;
+    width:6px;   /* vertical */
+    height:6px;  /* horizontal */
+}
+
+::-webkit-scrollbar-track{
+    background:transparent;
 }
 
 ::-webkit-scrollbar-thumb{
     background:#8d2123;
     border-radius:10px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background:#6a181b;
 }
 
 #address, #address1{
@@ -781,4 +816,10 @@ html{
         opacity:1;
         transform:translateY(0);
     }
+}
+
+/* SCROLL OFFSET FIX (for sticky navbar) */
+
+section{
+    scroll-margin-top: 90px;
 }
