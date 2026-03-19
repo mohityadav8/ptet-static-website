@@ -111,3 +111,29 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
 });
+
+// FINAL HYBRID NAVIGATION
+
+document.addEventListener("click", function(e){
+
+    const link = e.target.closest("a[data-section]");
+    if(!link) return;
+
+    // ✅ Allow browser default for new tab / middle click
+    if(e.ctrlKey || e.metaKey || e.button === 1){
+        return;
+    }
+
+    // ✅ Only override normal click
+    e.preventDefault();
+
+    const sectionId = link.getAttribute("data-section");
+    const section = document.getElementById(sectionId);
+
+    if(section){
+        section.scrollIntoView({
+            behavior: "smooth"
+        });
+    }
+
+});
