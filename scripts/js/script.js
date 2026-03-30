@@ -110,6 +110,29 @@ document.addEventListener("DOMContentLoaded", () => {
 
     }
 
+    /* FAQ ACCORDION (SINGLE OPEN + ANIMATION) */
+
+        const faqItems = document.querySelectorAll(".faq-item");
+        
+        faqItems.forEach(item => {
+        
+            const btn = item.querySelector(".faq-question");
+        
+            btn.addEventListener("click", () => {
+            
+                // close others
+                faqItems.forEach(i => {
+                    if(i !== item){
+                        i.classList.remove("active");
+                    }
+                });
+            
+                // toggle current
+                item.classList.toggle("active");
+            
+            });
+        
+        });
 });
 
 // FINAL HYBRID NAVIGATION

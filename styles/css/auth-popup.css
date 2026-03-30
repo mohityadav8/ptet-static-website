@@ -1,0 +1,186 @@
+/* ===== PREMIUM GLOBAL AUTH POPUP ===== */
+
+.auth-popup-overlay{
+    position:fixed;
+    inset:0;
+
+    background:rgba(0,0,0,0.65);
+    backdrop-filter:blur(8px);
+
+    display:none;
+    align-items:center;
+    justify-content:center;
+
+    z-index:9999;
+}
+
+/* POPUP BOX */
+
+.auth-popup{
+    position:relative;
+
+    background:rgba(255,255,255,0.92);
+    backdrop-filter:blur(18px);
+
+    padding:40px 30px;
+    border-radius:20px;
+
+    width:360px;
+    text-align:center;
+
+    box-shadow:
+        0 25px 80px rgba(0,0,0,0.35),
+        0 0 0 1px rgba(255,255,255,0.5);
+
+    transform:scale(0.9);
+    opacity:0;
+
+    animation:popupIn 0.35s ease forwards;
+}
+
+/* ANIMATION */
+
+@keyframes popupIn{
+    to{
+        transform:scale(1);
+        opacity:1;
+    }
+}
+
+/* GLOW EFFECT */
+
+.auth-popup::before{
+    content:"";
+    position:absolute;
+    top:-60px;
+    right:-60px;
+
+    width:180px;
+    height:180px;
+
+    background:rgba(141,33,35,0.15);
+    border-radius:50%;
+    filter:blur(70px);
+
+    z-index:-1;
+}
+
+/* TITLE */
+
+.auth-popup h3{
+    font-size:22px;
+    font-weight:700;
+    margin-bottom:8px;
+}
+
+/* TEXT */
+
+.auth-popup p{
+    font-size:14px;
+    color:#444;
+    margin-bottom:22px;
+}
+
+/* ACTIONS */
+
+.auth-popup-actions{
+    display:flex;
+    gap:14px;
+    justify-content:center;
+    margin-bottom:20px;
+}
+
+/* COMMON BUTTON STYLE */
+
+.popup-login-btn,
+.popup-register-btn{
+    padding:12px 22px;
+    border-radius:10px;
+    font-size:14px;
+    font-weight:600;
+    text-decoration:none;
+
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+
+    transition:all 0.25s ease;
+}
+
+/* LOGIN BUTTON (PRIMARY) */
+
+.popup-login-btn{
+    background:#8d2123;
+    color:#fff;
+
+    box-shadow:0 6px 18px rgba(141,33,35,0.35);
+}
+
+.popup-login-btn:hover{
+    background:#6f1a1c;
+    transform:translateY(-2px);
+    box-shadow:0 10px 25px rgba(141,33,35,0.45);
+}
+
+/* REGISTER BUTTON (SECONDARY BUT PREMIUM) */
+
+.popup-register-btn{
+    background:#f5f5f5;
+    color:#333;
+
+    border:1px solid #e5e5e5;
+}
+
+.popup-register-btn:hover{
+    background:#ebebeb;
+    transform:translateY(-2px);
+}
+
+/* CLOSE BUTTON */
+
+.popup-close-btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+
+    margin-top:12px;
+
+    padding:8px 18px;
+    border-radius:8px;
+
+    background:#f3f3f3;
+    color:#444;
+
+    font-size:13px;
+    font-weight:500;
+
+    border:1px solid #e2e2e2;
+
+    cursor:pointer;
+    transition:all 0.25s ease;
+}
+
+/* hover */
+
+.popup-close-btn:hover{
+    background:#eaeaea;
+    color:#000;
+    transform:translateY(-1px);
+}
+
+/* active click */
+
+.popup-close-btn:active{
+    transform:scale(0.96);
+}
+
+/* SMALL SCREEN */
+
+@media(max-width:480px){
+
+    .auth-popup{
+        width:90%;
+        padding:30px 20px;
+    }
+
+}
